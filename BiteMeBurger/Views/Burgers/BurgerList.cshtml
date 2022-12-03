@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BiteMeBurger.Models.Burger>
+
+@{
+    ViewData["Title"] = "BurgerList";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Burger Shop</h1>
+     
+</div>
+
+<div class="row">  
+    @foreach (var burger in Model)
+    {
+       <div id="burgerContainer" class="col-lg-3 col-md-4 col-sm-1">
+       <img id="burgerImage" style="width: 100%; height: 100%;" src="@burger.URL" alt="@burger.Name" />
+       <span id="burgerName">@burger.Name</span>
+        <span id="burgerPrice">Rs. Coming Soon</span>
+        <span id="burgerQuantity"><input id="quantityInput" type="number" name="burgerQuantity" value="" placeholder="0" /></span>
+        <span id="burgerCartButton"><button id="btn"><span class="fa fa-shopping-cart"></span>Add to Cart</button></span>
+       </div>
+}
+</div>

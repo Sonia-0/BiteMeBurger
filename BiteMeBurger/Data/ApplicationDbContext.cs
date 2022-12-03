@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BiteMeBurger.Models;
 
 namespace BiteMeBurger.Data
 {
@@ -12,5 +13,6 @@ namespace BiteMeBurger.Data
             : base(options)
         {
         }
+        public DbSet<BiteMeBurger.Models.Burger> Burger { get; set; }
     }
 }
